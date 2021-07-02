@@ -1,21 +1,18 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
-import './App.css';
 
-function App() {
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-  return (
-    <>
-      <header >
-        
-        <p> Chatroom n</p>
+import {
+    Enter,
+    Room
+} from './components'
 
-      </header>
-      <main>
-        <Route path='/' exact />>
-      </main>
-    </>
-  );
-}
+const App = () => (
+    <Router>
+        <Route path='/' exact component={Enter} />
+        <Route path='/room' component={Room} />
+    </Router>
+);
 
 export default App;
+
